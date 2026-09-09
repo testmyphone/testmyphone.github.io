@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>DeviceCheck — Free Browser-Based Hardware Diagnostic Suite</title>
+<meta name="description" content="Test your phone, tablet, or laptop's screen, camera, microphone, sensors, and connectivity — 21 diagnostic tools that run instantly in your browser. No install, no upload, no account.">
+<meta name="keywords" content="device test, screen test, dead pixel test, touchscreen test, camera test, microphone test, sensor test, hardware diagnostic, browser diagnostic tool">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://devicecheck.example/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DeviceCheck">
+<meta property="og:title" content="DeviceCheck — Free Browser-Based Hardware Diagnostic Suite">
+<meta property="og:description" content="21 browser-based tools for testing your screen, camera, mic, sensors, and connectivity. Nothing to install, nothing leaves your device.">
+<meta property="og:url" content="https://devicecheck.example/">
+<meta property="og:image" content="https://devicecheck.example/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DeviceCheck — Free Browser-Based Hardware Diagnostic Suite">
+<meta name="twitter:description" content="21 browser-based tools for testing your screen, camera, mic, sensors, and connectivity.">
+
+<meta name="theme-color" content="#6366F1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%236366F1%22/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "DeviceCheck",
+  "url": "https://devicecheck.example/",
+  "description": "Free browser-based hardware diagnostic suite for testing screens, cameras, microphones, sensors, and connectivity.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://devicecheck.example/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DeviceCheck Diagnostic Suite",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "21 browser-based hardware diagnostic tools covering display, audio, sensors, camera, connectivity, and performance testing.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": "Multi-touch test, dead pixel test, refresh rate test, microphone test, speaker test, accelerometer test, GPS accuracy test, network speed test, CPU benchmark, GPU benchmark, battery status"
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div id="header-root"></div>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1 id="hero-heading">Find out what your device can actually do.</h1>
+        <p class="hero-sub">Twenty-one diagnostic tools for your screen, camera, microphone, sensors, and connection — all running locally in this tab. Nothing installed, nothing uploaded.</p>
+        <div class="hero-actions">
+          <a href="#tools" class="btn btn-primary">Start diagnostic scan</a>
+          <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-hidden="true">
+        <div class="scan-panel">
+          <div class="scan-panel-head">
+            <span class="scan-dot"></span>
+            <span class="scan-label">live device readout</span>
+          </div>
+          <ul class="scan-lines" id="scan-lines">
+            <li><span>display</span><b data-readout="resolution">—</b></li>
+            <li><span>pixel ratio</span><b data-readout="dpr">—</b></li>
+            <li><span>platform</span><b data-readout="platform">—</b></li>
+            <li><span>cores</span><b data-readout="cores">—</b></li>
+            <li><span>connection</span><b data-readout="connection">—</b></li>
+            <li><span>battery</span><b data-readout="battery">—</b></li>
+          </ul>
+          <div class="scan-sweep"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick diagnostic scanner callout -->
+  <section class="quick-scan" aria-labelledby="quick-scan-heading">
+    <div class="section-inner">
+      <div class="quick-scan-card">
+        <div class="quick-scan-text">
+          <h2 id="quick-scan-heading">Your device, in three numbers</h2>
+          <p>A live read before you run a single test.</p>
+        </div>
+        <div class="quick-scan-grid" id="quick-scan-grid">
+          <div class="quick-stat">
+            <span class="quick-stat-label">Operating system</span>
+            <span class="quick-stat-value" data-readout="os">Detecting…</span>
+          </div>
+          <div class="quick-stat">
+            <span class="quick-stat-label">Screen resolution</span>
+            <span class="quick-stat-value" data-readout="resolution2">Detecting…</span>
+          </div>
+          <div class="quick-stat">
+            <span class="quick-stat-label">Connection status</span>
+            <span class="quick-stat-value" data-readout="connection2">Detecting…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools grid -->
+  <section class="tools-section" id="tools" aria-labelledby="tools-heading">
+    <div class="section-inner">
+      <h2 id="tools-heading">The full hardware test suite</h2>
+      <p class="section-lede">Twenty-one tests across six categories. Pick one, grant the permission it needs, and read the result.</p>
+      <div id="tools-root"></div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how-it-works" id="how-it-works" aria-labelledby="how-heading">
+    <div class="section-inner">
+      <h2 id="how-heading">How it works</h2>
+      <ol class="steps">
+        <li class="step">
+          <div class="step-index">1</div>
+          <h3>Select a test</h3>
+          <p>Choose any of the 21 tools from the suite above — display, audio, sensors, camera, network, or performance.</p>
+        </li>
+        <li class="step">
+          <div class="step-index">2</div>
+          <h3>Grant browser permission</h3>
+          <p>Some tests ask for camera, mic, or location access. Your browser controls this — DeviceCheck never sees it directly.</p>
+        </li>
+        <li class="step">
+          <div class="step-index">3</div>
+          <h3>View instant results</h3>
+          <p>Results render in the page immediately, measured live from your hardware and browser APIs.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" aria-labelledby="features-heading">
+    <div class="section-inner">
+      <h2 id="features-heading">Built to run in the browser, and stay there</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Nothing leaves your device</h3>
+          <p>Every test runs on-device using standard browser APIs. No file, image, or recording is ever uploaded to a server.</p>
+        </div>
+        <div class="feature-card">
+          <h3>No install required</h3>
+          <p>Open a tab and go. There's no app to download, no extension to add, no account to create.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fast by default</h3>
+          <p>Each tool is a small, focused script — tests start in under a second and results update in real time.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Works across platforms</h3>
+          <p>The same test suite runs on phones, tablets, and desktops, on any modern browser engine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported devices -->
+  <section class="supported" aria-labelledby="supported-heading">
+    <div class="section-inner">
+      <h2 id="supported-heading">Supported devices and browsers</h2>
+      <div class="supported-grid">
+        <span class="supported-badge">iOS</span>
+        <span class="supported-badge">Android</span>
+        <span class="supported-badge">macOS</span>
+        <span class="supported-badge">Windows</span>
+        <span class="supported-badge">Chrome</span>
+        <span class="supported-badge">Safari</span>
+        <span class="supported-badge">Firefox</span>
+        <span class="supported-badge">Edge</span>
+      </div>
+      <p class="supported-note">A small number of sensor-level tests (magnetometer, ambient light) depend on hardware and browser support and may be limited on desktop or on Safari.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-heading">
+    <div class="section-inner">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item">
+          <h3><button class="faq-question" aria-expanded="false">Why does a test ask for camera or microphone permission?</button></h3>
+          <div class="faq-answer">
+            <p>Tests like the camera check or microphone input test need direct access to the hardware to read a live signal. Your browser handles that permission — DeviceCheck only reads what the browser API returns, and nothing is recorded or sent anywhere.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-question" aria-expanded="false">Is any of my data uploaded or stored?</button></h3>
+          <div class="faq-answer">
+            <p>No. Every test runs entirely in your browser tab using standard Web APIs. Results exist only in the page and disappear when you close or refresh it.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-question" aria-expanded="false">Why is a sensor test unavailable on my device?</button></h3>
+          <div class="faq-answer">
+            <p>Some sensors — like a magnetometer or ambient light sensor — simply aren't present on laptops and desktops, or the browser doesn't expose that API. The tool will tell you when a test can't run on your current device.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-question" aria-expanded="false">How accurate are the results?</button></h3>
+          <div class="faq-answer">
+            <p>Results reflect what the browser reports from the underlying hardware. This is generally reliable for pass/fail checks like dead pixels or touch response, though timing-sensitive tests such as refresh rate can vary slightly by a few Hz depending on browser load.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-question" aria-expanded="false">Do I need to install anything?</button></h3>
+          <div class="faq-answer">
+            <p>No. Every tool runs directly in this page. There's nothing to download and no account to set up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-root"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Run Diagnostics — TestLab</title>
+<meta name="description" content="Run TestLab's 24-test mobile hardware diagnostic suite directly in your browser." />
+<meta name="theme-color" content="#4F46E5" />
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./css/base.css" />
+<link rel="stylesheet" href="./css/layout.css" />
+<link rel="stylesheet" href="./css/components.css" />
+</head>
+<body>
+<a href="#runnerMain" class="skip-link">Skip to content</a>
+
+<div class="runner-shell">
+  <header class="runner-header no-print">
+    <div class="runner-header__bar">
+      <a href="./index.html" class="logo" aria-label="TestLab home">
+        <span class="logo__mark">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"></rect><path d="M9 12l2 2 4-4"></path></svg>
+        </span>
+        <span class="logo__text" style="font-size:16px;">Test<span>Lab</span></span>
+      </a>
+      <div class="runner-progress-row" id="runnerProgressRow" style="flex:1;">
+        <div style="flex:1; height:8px; background:var(--color-border); border-radius:999px; overflow:hidden; min-width:60px;">
+          <div id="progressBarFill" style="height:100%; width:0%; background:linear-gradient(90deg,var(--color-primary),var(--color-secondary)); border-radius:999px; transition:width .3s ease;"></div>
+        </div>
+        <span class="body-sm tnum" id="progressCounter" style="white-space:nowrap;"></span>
+      </div>
+      <button class="runner-toolbar-btn" id="exitRunnerBtn" type="button">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+        Exit
+      </button>
+    </div>
+  </header>
+
+  <main class="runner-main" id="runnerMain" aria-live="off">
+    <p class="body-md">Loading diagnostic runner…</p>
+  </main>
+</div>
+
+<div id="srAnnounce" class="visually-hidden" role="status" aria-live="polite"></div>
+
+<!-- Full-bleed color / touch overlays are appended dynamically by test modules -->
+
+<script src="./js/report.js"></script>
+<script src="./js/tests/audio.js"></script>
+<script src="./js/tests/display.js"></script>
+<script src="./js/tests/sensors.js"></script>
+<script src="./js/tests/connectivity.js"></script>
+<script src="./js/tests/hardware.js"></script>
+<script src="./js/tests/device.js"></script>
+<script src="./js/runner.js"></script>
+</body>
+</html>

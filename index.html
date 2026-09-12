@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TestLab — Free Mobile Phone Hardware Test in Your Browser</title>
+<meta name="description" content="Run 18+ real hardware diagnostics on any phone — microphone, speakers, camera, touch, sensors, GPS, battery and more — free, instantly, with no app install." />
+<meta name="theme-color" content="#4F46E5" />
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./css/base.css" />
+<link rel="stylesheet" href="./css/layout.css" />
+<link rel="stylesheet" href="./css/components.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header" id="siteHeader">
+  <div class="site-header__bar">
+    <div class="site-header__start">
+      <a href="./index.html" class="logo" aria-label="TestLab home">
+        <span class="logo__mark">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6" y="3" width="12" height="18" rx="3"></rect>
+            <path d="M9 12l2 2 4-4"></path>
+          </svg>
+        </span>
+        <span class="logo__text">Test<span>Lab</span></span>
+      </a>
+      <span class="pill header-free-pill">
+        <span class="pill__dot"></span>100% Free • No Install
+      </span>
+    </div>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      <a class="body-md" href="#test-suite" style="color:var(--color-text-body); font-weight:600;">Tests</a>
+      <a class="body-md" href="#how-it-works" style="color:var(--color-text-body); font-weight:600;">How It Works</a>
+      <a class="body-md" href="#features" style="color:var(--color-text-body); font-weight:600;">Features</a>
+      <a class="body-md" href="#faq" style="color:var(--color-text-body); font-weight:600;">FAQ</a>
+      <a class="body-md" href="#dashboard" style="color:var(--color-text-body); font-weight:600;">Sample Report</a>
+    </nav>
+
+    <div class="site-header__actions">
+      <a href="./tests.html" class="btn btn--primary btn--sm">Start Testing</a>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-toggle" id="mobileMenuClose" aria-label="Close menu" style="align-self:flex-end;">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+  </button>
+  <nav class="mobile-menu__links" aria-label="Mobile">
+    <a href="#test-suite" data-menu-link>Tests</a>
+    <a href="#how-it-works" data-menu-link>How It Works</a>
+    <a href="#features" data-menu-link>Features</a>
+    <a href="#faq" data-menu-link>FAQ</a>
+    <a href="#dashboard" data-menu-link>Sample Report</a>
+  </nav>
+  <a href="./tests.html" class="btn btn--primary btn--block">Start Testing</a>
+</div>
+
+<main id="main" class="site-main">
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero" id="hero">
+    <div class="blob" style="top:-140px; left:8%; width:420px; height:420px; background:var(--color-primary-tint); opacity:.5;"></div>
+    <div class="blob" style="top:180px; right:0; width:380px; height:380px; background:var(--color-secondary-tint); opacity:.5;"></div>
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy reveal">
+          <span class="eyebrow"><span class="pill__dot" style="background:var(--color-secondary);"></span>Free • No Install • 100% In-Browser</span>
+          <h1 class="h-xl">Test Every Part of Your Phone — <span class="text-primary">Right in the Browser.</span></h1>
+          <p class="body-lg" style="max-width:34rem;">Instant hardware diagnostic suite for iOS &amp; Android. Run 24 real tests including audio, multi-touch, camera, sensors, screen health, and battery — no app, no account.</p>
+          <div class="hero__ctas">
+            <a href="./tests.html" class="btn btn--primary">
+              <span>Run All Tests</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"></line><path d="M14 6l6 6-6 6"></path></svg>
+            </a>
+            <a href="#dashboard" class="btn btn--secondary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="20" x2="5" y2="11"></line><line x1="12" y1="20" x2="12" y2="5"></line><line x1="19" y1="20" x2="19" y2="14"></line></svg>
+              <span>See a Sample Report</span>
+            </a>
+          </div>
+          <div class="hero__trust body-sm">
+            <span style="display:flex; align-items:center; gap:6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l2.5 2.5L16 9"></path></svg>Zero Download</span>
+            <span style="display:flex; align-items:center; gap:6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>100% Private</span>
+            <span style="display:flex; align-items:center; gap:6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><line x1="12" y1="13" x2="12" y2="9"></line><line x1="12" y1="13" x2="15" y2="14.5"></line></svg>Results in 60s</span>
+            <span style="display:flex; align-items:center; gap:6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><ellipse cx="12" cy="12" rx="4" ry="9"></ellipse></svg>Safari, Chrome &amp; Firefox</span>
+          </div>
+        </div>
+
+        <!-- Hero right: LIVE functioning demo widget -->
+        <div class="hero__panel-wrap reveal">
+          <div class="floating-badge" id="micBadge">
+            <span class="floating-badge__dot" id="micBadgeDot"></span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><line x1="12" y1="18" x2="12" y2="22"></line></svg>
+            <span id="micBadgeText">Microphone Demo</span>
+          </div>
+
+          <div class="phone-panel">
+            <div class="phone-panel__head">
+              <div class="phone-panel__device">
+                <span class="phone-panel__device-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"></rect></svg>
+                </span>
+                <div style="min-width:0;">
+                  <div style="font-family:var(--font-heading); font-weight:600; font-size:14px;">Your Device</div>
+                  <div class="body-sm" id="deviceUA" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:180px;">Detecting browser…</div>
+                </div>
+              </div>
+              <div class="phone-panel__ring" aria-hidden="true">
+                <svg width="52" height="52" viewBox="0 0 52 52" style="transform:rotate(-90deg);">
+                  <circle class="progress-ring__track" cx="26" cy="26" r="21"></circle>
+                  <circle class="progress-ring__value" id="heroRing" cx="26" cy="26" r="21"></circle>
+                </svg>
+              </div>
+            </div>
+
+            <div class="phone-panel__body">
+              <!-- Module 1: live mic meter -->
+              <div class="demo-module">
+                <div class="demo-module__head">
+                  <span class="demo-module__title">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path></svg>
+                    Microphone Spectrum
+                  </span>
+                  <span class="body-sm" id="micStatusText">Tap to enable</span>
+                </div>
+                <div class="waveform" id="heroWaveform" aria-hidden="true"></div>
+                <div style="padding-top:8px;">
+                  <button class="btn btn--telemetry btn--sm btn--block" id="heroMicBtn" type="button">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><line x1="12" y1="18" x2="12" y2="22"></line></svg>
+                    Enable Microphone Demo
+                  </button>
+                </div>
+              </div>
+
+              <!-- Module 2: speaker test -->
+              <div class="demo-module">
+                <div class="demo-module__head">
+                  <span class="demo-module__title">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"></path><path d="M16 8a5 5 0 0 1 0 8"></path></svg>
+                    Stereo Speaker Test
+                  </span>
+                  <span class="body-sm">440Hz tone</span>
+                </div>
+                <div class="speaker-controls">
+                  <div class="pan-toggle" role="group" aria-label="Channel">
+                    <button type="button" id="heroPanLeft" aria-pressed="false">Left</button>
+                    <button type="button" id="heroPanCenter" aria-pressed="true">Both</button>
+                    <button type="button" id="heroPanRight" aria-pressed="false">Right</button>
+                  </div>
+                  <button class="btn btn--secondary btn--sm btn--block" id="heroSpeakerBtn" type="button">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5l10 7-10 7z"></path></svg>
+                    Play Tone
+                  </button>
+                </div>
+              </div>
+
+              <!-- Module 3: touch canvas -->
+              <div class="demo-module">
+                <div class="demo-module__head">
+                  <span class="demo-module__title">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="8" r="3"></circle></svg>
+                    Multi-Touch Digitizer
+                  </span>
+                  <span class="body-sm" id="touchPointCount">0 points</span>
+                </div>
+                <div class="touch-canvas-wrap">
+                  <canvas id="heroTouchCanvas" aria-label="Draw here to test touch responsiveness" role="img"></canvas>
+                </div>
+              </div>
+
+              <!-- Mini test row list -->
+              <div class="mini-row-list" id="heroMiniRows" aria-hidden="true">
+                <div class="mini-row"><span class="mini-row__name">OLED &amp; Pixels</span><span class="chip chip--pass"><span class="chip__dot"></span>Passed</span></div>
+                <div class="mini-row"><span class="mini-row__name">Sensors</span><span class="chip chip--running"><span class="chip__dot"></span>Running</span></div>
+                <div class="mini-row"><span class="mini-row__name">Battery Health</span><span class="chip chip--pending"><span class="chip__dot"></span>Queued</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= STATS STRIP ============================= -->
+  <section class="section section--tight section--alt">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-card__top">
+            <span class="stat-card__value">24</span>
+            <span class="stat-card__icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.1-3.1a5 5 0 0 1-6.4 6.4L6.5 20.5a2 2 0 0 1-3-3l7.9-7.9a5 5 0 0 1 6.4-6.4z"></path></svg></span>
+          </div>
+          <span style="font-family:var(--font-heading); font-weight:600; font-size:14px;">Hardware Tests</span>
+          <p class="body-sm">Sensors, audio channels, multi-touch, camera optics &amp; radios.</p>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-card__top">
+            <span class="stat-card__value">0MB</span>
+            <span class="stat-card__icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="M7 11l5 5 5-5"></path><line x1="4" y1="21" x2="20" y2="21"></line></svg></span>
+          </div>
+          <span style="font-family:var(--font-heading); font-weight:600; font-size:14px;">Download Required</span>
+          <p class="body-sm">Runs entirely as static HTML, CSS &amp; JavaScript.</p>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-card__top">
+            <span class="stat-card__value">100%</span>
+            <span class="stat-card__icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></span>
+          </div>
+          <span style="font-family:var(--font-heading); font-weight:600; font-size:14px;">Client-Side</span>
+          <p class="body-sm">Nothing you test is ever uploaded to a server.</p>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-card__top">
+            <span class="stat-card__value">iOS &amp; Android</span>
+            <span class="stat-card__icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><ellipse cx="12" cy="12" rx="4" ry="9"></ellipse></svg></span>
+          </div>
+          <span style="font-family:var(--font-heading); font-weight:600; font-size:14px;">Cross-Platform</span>
+          <p class="body-sm">Works in any modern mobile or desktop browser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FULL TEST SUITE GRID ============================= -->
+  <section class="section" id="test-suite">
+    <div class="container">
+      <div class="section-head section-head--center" style="margin-inline:auto;">
+        <span class="eyebrow" style="margin-inline:auto;">Complete Diagnostic Coverage</span>
+        <h2 class="h-lg">Everything We Test in Your Browser</h2>
+        <p class="body-lg">Every module below uses a real browser API. Unsupported hardware is labeled clearly instead of silently failing.</p>
+      </div>
+
+      <div class="tests-toolbar" role="tablist" aria-label="Filter tests by category" id="categoryTabs">
+        <button class="category-tab" type="button" aria-pressed="true" data-category="all">All Tests</button>
+        <button class="category-tab" type="button" aria-pressed="false" data-category="audio">Audio</button>
+        <button class="category-tab" type="button" aria-pressed="false" data-category="display">Display &amp; Touch</button>
+        <button class="category-tab" type="button" aria-pressed="false" data-category="sensors">Sensors</button>
+        <button class="category-tab" type="button" aria-pressed="false" data-category="connectivity">Connectivity</button>
+        <button class="category-tab" type="button" aria-pressed="false" data-category="hardware">Hardware</button>
+        <button class="category-tab" type="button" aria-pressed="false" data-category="device">Device</button>
+      </div>
+
+      <div class="tests-grid" id="testsGrid">
+        <!-- Cards are generated in JS from a single source of truth, see js/main.js TEST_CATALOG -->
+      </div>
+
+      <div style="display:flex; flex-direction:column; align-items:center; gap:12px; padding-top:32px;">
+        <p class="body-md">Need all results at once?</p>
+        <a href="./tests.html" class="btn btn--primary">Run All Tests →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= HOW IT WORKS ============================= -->
+  <section class="section section--alt" id="how-it-works">
+    <div class="container">
+      <div class="section-head section-head--center" style="margin-inline:auto;">
+        <span class="eyebrow" style="margin-inline:auto;">Simple By Design</span>
+        <h2 class="h-lg">How TestLab Operates</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step reveal">
+          <span class="timeline-step__num">1</span>
+          <h3 class="h-sm">Open on Your Phone</h3>
+          <p class="body-sm">Visit TestLab in Safari, Chrome, or any modern mobile browser — no app store required.</p>
+        </div>
+        <div class="timeline-step reveal">
+          <span class="timeline-step__num">2</span>
+          <h3 class="h-sm">Tap &quot;Run All Tests&quot;</h3>
+          <p class="body-sm">The runner walks through all 24 modules, one at a time, with plain-language instructions.</p>
+        </div>
+        <div class="timeline-step reveal">
+          <span class="timeline-step__num">3</span>
+          <h3 class="h-sm">Follow On-Screen Prompts</h3>
+          <p class="body-sm">Confirm what you see and hear — TestLab auto-detects what it can and asks when it can't.</p>
+        </div>
+        <div class="timeline-step reveal">
+          <span class="timeline-step__num">4</span>
+          <h3 class="h-sm">Get Your Report</h3>
+          <p class="body-sm">See a pass/fail breakdown instantly, then download, print, or share the results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= RESULTS / DASHBOARD PREVIEW ============================= -->
+  <section class="section" id="dashboard">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Proof Of Health</span>
+          <h2 class="h-lg" style="padding-top:8px;">Built for Buying, Selling &amp; Repairs</h2>
+          <p class="body-lg" style="padding-top:12px;">A finished TestLab report is a clean, shareable summary — handy for resale listings, repair intake, or double-checking a used phone before you buy it.</p>
+          <div style="padding-top:16px;">
+            <div class="benefit-row">
+              <span class="benefit-row__icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12l2.5 2.5L16 9"></path></svg></span>
+              <div><strong style="font-family:var(--font-heading); font-size:14px;">Per-test pass/fail breakdown</strong><p class="body-sm">Every one of the 24 tests, itemized with its result.</p></div>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-row__icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12l2.5 2.5L16 9"></path></svg></span>
+              <div><strong style="font-family:var(--font-heading); font-size:14px;">Downloadable JSON report</strong><p class="body-sm">Attach it to a listing or a repair ticket.</p></div>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-row__icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12l2.5 2.5L16 9"></path></svg></span>
+              <div><strong style="font-family:var(--font-heading); font-size:14px;">Print or save as PDF</strong><p class="body-sm">One click, using your browser's native print dialog.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split__visual reveal">
+          <div class="card" style="padding:24px; max-width:420px; margin-inline:auto;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom:16px; border-bottom:1px solid var(--color-border);">
+              <div>
+                <div style="font-family:var(--font-heading); font-weight:700;">Sample Device Report</div>
+                <div class="body-sm">Generated by TestLab</div>
+              </div>
+              <div style="text-align:center;">
+                <svg width="56" height="56" viewBox="0 0 56 56" style="transform:rotate(-90deg);">
+                  <circle class="progress-ring__track" cx="28" cy="28" r="23"></circle>
+                  <circle class="progress-ring__value" cx="28" cy="28" r="23" style="--ring-color:var(--color-success); stroke-dasharray:144.51; stroke-dashoffset:11.6;"></circle>
+                </svg>
+              </div>
+            </div>
+            <div style="padding-top:16px; display:flex; flex-direction:column; gap:10px;">
+              <div class="mini-row"><span class="mini-row__name">Microphone &amp; Speakers</span><span class="chip chip--pass"><span class="chip__dot"></span>Pass</span></div>
+              <div class="mini-row"><span class="mini-row__name">Touch &amp; Display</span><span class="chip chip--pass"><span class="chip__dot"></span>Pass</span></div>
+              <div class="mini-row"><span class="mini-row__name">Cameras</span><span class="chip chip--pass"><span class="chip__dot"></span>Pass</span></div>
+              <div class="mini-row"><span class="mini-row__name">Battery Health</span><span class="chip chip--fail"><span class="chip__dot"></span>Fail</span></div>
+            </div>
+            <div class="results-actions" style="padding-top:20px;">
+              <a href="./tests.html" class="btn btn--primary btn--sm">Run Your Own Test</a>
+              <button class="btn btn--secondary btn--sm" type="button" id="copySampleLinkBtn">Copy Shareable Link</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= WHY CHOOSE US / FEATURES ============================= -->
+  <section class="section section--alt" id="features">
+    <div class="container">
+      <div class="section-head section-head--center" style="margin-inline:auto;">
+        <span class="eyebrow" style="margin-inline:auto;">Why TestLab</span>
+        <h2 class="h-lg">The Gold Standard for Browser Diagnostics</h2>
+      </div>
+      <div class="bento-grid">
+        <div class="feature-card card reveal">
+          <span class="feature-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></span>
+          <h3 class="h-sm">100% Client-Side Sandbox</h3>
+          <p class="body-sm">Every test runs locally in your browser. Nothing is uploaded, logged, or stored on a server.</p>
+        </div>
+        <div class="feature-card card reveal">
+          <span class="feature-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l-6 6 6 6"></path><path d="M15 6l6 6-6 6"></path></svg></span>
+          <h3 class="h-sm">Modern Web Standards</h3>
+          <p class="body-sm">Built on the same Web APIs powering native apps — Web Audio, DeviceMotion, WebAuthn, and more.</p>
+        </div>
+        <div class="feature-card card reveal">
+          <span class="feature-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l1-5h14l1 5"></path><path d="M4 9h16v10H4z"></path><path d="M9 19v-5h6v5"></path></svg></span>
+          <h3 class="h-sm">Built for Resellers</h3>
+          <p class="body-sm">A fast, repeatable way to verify hardware between trade-ins, refurbishing, and resale listings.</p>
+        </div>
+        <div class="feature-card card reveal">
+          <span class="feature-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><line x1="12" y1="13" x2="12" y2="9"></line><line x1="12" y1="13" x2="15" y2="14.5"></line></svg></span>
+          <h3 class="h-sm">Sub-Second Polling</h3>
+          <p class="body-sm">Sensor readouts and live meters update in real time, not on a delayed refresh cycle.</p>
+        </div>
+        <div class="feature-card card reveal">
+          <span class="feature-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6l7-3z"></path></svg></span>
+          <h3 class="h-sm">Honest About Limits</h3>
+          <p class="body-sm">When a browser can't expose a sensor (like volume buttons), we say so instead of faking a result.</p>
+        </div>
+        <div class="feature-card card reveal">
+          <span class="feature-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"></path></svg></span>
+          <h3 class="h-sm">Zero Setup</h3>
+          <p class="body-sm">No account, no email, no download. Open the link and start the first test in seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= TESTIMONIALS ============================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--center" style="margin-inline:auto;">
+        <span class="eyebrow" style="margin-inline:auto;">Trusted By Technicians &amp; Everyday Buyers</span>
+        <h2 class="h-lg">What People Run TestLab For</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card card reveal">
+          <div class="testimonial-card__stars" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+          </div>
+          <p class="body-md" style="color:var(--color-text);">"I run this on every trade-in before we quote a price. Catches dead pixels and bad mics in under two minutes."</p>
+          <div class="testimonial-card__person">
+            <span class="avatar-generated" style="background:var(--color-primary);">MR</span>
+            <div><div style="font-weight:600; font-size:13px;">Marcus R.</div><div class="body-sm">Phone repair technician</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card card reveal">
+          <div class="testimonial-card__stars" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+          </div>
+          <p class="body-md" style="color:var(--color-text);">"Bought a used phone off a marketplace app and ran the full suite in the parking lot before paying. Found a dead speaker channel immediately."</p>
+          <div class="testimonial-card__person">
+            <span class="avatar-generated" style="background:var(--color-secondary);">JL</span>
+            <div><div style="font-weight:600; font-size:13px;">Jamie L.</div><div class="body-sm">Secondhand phone buyer</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card card reveal">
+          <div class="testimonial-card__stars" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" opacity="0.35"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1 5-4.3-2.6-4.3 2.6 1-5-3.8-3.4 5-.5z"></path></svg>
+          </div>
+          <p class="body-md" style="color:var(--color-text);">"The honesty about which tests need a manual confirm (versus an auto pass) is what sold me. It doesn't pretend to know things it can't."</p>
+          <div class="testimonial-card__person">
+            <span class="avatar-generated" style="background:var(--color-primary-dark);">SK</span>
+            <div><div style="font-weight:600; font-size:13px;">Sara K.</div><div class="body-sm">QA engineer</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-row" aria-hidden="true">
+        <span class="body-sm" style="font-weight:700; letter-spacing:0.04em;">MOBILEDEVICE.TOOLS</span>
+        <span class="body-sm" style="font-weight:700; letter-spacing:0.04em;">REFURB NETWORK</span>
+        <span class="body-sm" style="font-weight:700; letter-spacing:0.04em;">TRADE-IN CO-OP</span>
+        <span class="body-sm" style="font-weight:700; letter-spacing:0.04em;">REPAIR GUILD</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FAQ ============================= -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <div class="section-head section-head--center" style="margin-inline:auto;">
+        <span class="eyebrow" style="margin-inline:auto;">Everything You Need To Know</span>
+        <h2 class="h-lg">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="accordion-item">
+          <button class="accordion-item__trigger" aria-expanded="false" aria-controls="faq-panel-1" id="faq-trigger-1">
+            <span>How is this different from a native diagnostic app?</span>
+            <span class="accordion-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="accordion-item__panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1">
+            <div class="accordion-item__panel-inner">TestLab uses standard Web APIs (getUserMedia, DeviceMotion, WebAuthn, and similar) that ship in modern mobile browsers, so it needs no install and no app-store review. The trade-off is that a few sensors — like physical volume buttons — simply aren't exposed to web pages, and we label those clearly instead of guessing.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__trigger" aria-expanded="false" aria-controls="faq-panel-2" id="faq-trigger-2">
+            <span>Is any of my data sent to a server?</span>
+            <span class="accordion-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="accordion-item__panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2">
+            <div class="accordion-item__panel-inner">No. Every test — audio input, camera preview, location, sensors — is processed locally in your browser. Your results are only saved in your own browser's local storage so you can revisit them, and nothing is uploaded anywhere.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__trigger" aria-expanded="false" aria-controls="faq-panel-3" id="faq-trigger-3">
+            <span>Why did a test come back &quot;Not Supported&quot;?</span>
+            <span class="accordion-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="accordion-item__panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3">
+            <div class="accordion-item__panel-inner">Some browsers, particularly Safari on iOS, don't expose every hardware API to web pages — Bluetooth pairing and USB access are common examples. When that happens TestLab marks the test "Not supported on this browser" rather than reporting a false failure.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__trigger" aria-expanded="false" aria-controls="faq-panel-4" id="faq-trigger-4">
+            <span>Does it work if I open it from a file instead of a website?</span>
+            <span class="accordion-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="accordion-item__panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4">
+            <div class="accordion-item__panel-inner">Most hardware APIs (microphone, camera, geolocation, sensors) require a "secure context" — either <code>https://</code> or <code>localhost</code>. Opening the files directly with <code>file://</code> will load the page, but browsers will block the sensitive APIs. Serve it over HTTPS (GitHub Pages does this automatically) or a local dev server.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__trigger" aria-expanded="false" aria-controls="faq-panel-5" id="faq-trigger-5">
+            <span>Can I re-run just one test?</span>
+            <span class="accordion-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="accordion-item__panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5">
+            <div class="accordion-item__panel-inner">Yes — every test card on the homepage links straight to that single test (for example <code>tests.html?test=microphone</code>), and the runner also lets you retry the current test without restarting the whole suite.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__trigger" aria-expanded="false" aria-controls="faq-panel-6" id="faq-trigger-6">
+            <span>Is TestLab really free?</span>
+            <span class="accordion-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="accordion-item__panel" id="faq-panel-6" role="region" aria-labelledby="faq-trigger-6">
+            <div class="accordion-item__panel-inner">Yes. There's no paywall, no account, and no limit on how many times you can run the suite.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FINAL CTA ============================= -->
+  <section class="section">
+    <div class="container">
+      <div class="final-cta section--dark">
+        <div class="blob" style="top:-80px; left:-80px; width:280px; height:280px; background:var(--color-secondary); opacity:.3;"></div>
+        <div class="blob" style="bottom:-80px; right:-80px; width:280px; height:280px; background:#fff; opacity:.2;"></div>
+        <div class="final-cta__content">
+          <span class="pill" style="background:rgba(255,255,255,0.15); color:#fff; box-shadow:none;"><span class="pill__dot"></span>Zero Installation • Instant Results</span>
+          <h2 class="h-lg" style="color:#fff;">Ready to Verify Your Phone's Hardware?</h2>
+          <p class="body-lg" style="color:rgba(255,255,255,0.85);">Start your 60-second diagnostic run now. Test multi-touch, stereo speakers, cameras, and sensors — completely free, right in your browser.</p>
+          <div class="final-cta__ctas">
+            <a href="./tests.html" class="btn btn--white">Launch Test Suite →</a>
+            <a href="#dashboard" class="btn btn--on-dark">See a Sample Report</a>
+          </div>
+          <p class="body-sm" style="color:rgba(255,255,255,0.7);">No credit card • No phone number • Instant results</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col" style="grid-column: span 1;">
+        <a href="./index.html" class="logo" aria-label="TestLab home">
+          <span class="logo__mark">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"></rect><path d="M9 12l2 2 4-4"></path></svg>
+          </span>
+          <span class="logo__text">Test<span>Lab</span></span>
+        </a>
+        <p class="body-md" style="max-width:26rem;">Instant browser-based mobile phone hardware diagnostics — touch, audio, screen, sensors, cameras and connectivity, with no app install.</p>
+        <div class="pill" style="width:fit-content;"><span class="pill__dot"></span>All Systems Operational</div>
+      </div>
+      <div class="footer-col">
+        <span class="eyebrow" style="color:var(--color-text-muted);">Product</span>
+        <a class="body-md" href="./tests.html">Diagnostic Suite</a>
+        <a class="body-md" href="#dashboard">Sample Report</a>
+        <a class="body-md" href="#features">Features</a>
+      </div>
+      <div class="footer-col">
+        <span class="eyebrow" style="color:var(--color-text-muted);">24 Tests</span>
+        <a class="body-md" href="./tests.html?test=multitouch">Multitouch &amp; Digitizer</a>
+        <a class="body-md" href="./tests.html?test=deadpixel">Display &amp; Dead Pixels</a>
+        <a class="body-md" href="./tests.html?test=microphone">Microphone &amp; Speakers</a>
+        <a class="body-md" href="./tests.html?test=gyroscope">Gyro &amp; Accelerometer</a>
+        <a class="body-md" href="./tests.html?test=camera">Cameras</a>
+      </div>
+      <div class="footer-col">
+        <span class="eyebrow" style="color:var(--color-text-muted);">Company</span>
+        <a class="body-md" href="#faq">FAQ</a>
+        <a class="body-md" href="#how-it-works">How It Works</a>
+        <a class="body-md" href="#hero">Home</a>
+      </div>
+      <div class="footer-col">
+        <span class="eyebrow" style="color:var(--color-text-muted);">Privacy</span>
+        <span class="body-md">Zero data retention</span>
+        <span class="body-md">No sign-up required</span>
+        <span class="body-md">Client-side only</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="body-sm">© <span id="footerYear"></span> TestLab. Client-side isolated execution. No telemetry or images stored.</p>
+      <div class="footer-bottom__links body-sm">
+        <a href="#faq">Privacy</a>
+        <a href="#faq">Terms</a>
+        <a href="#hero">Status</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
